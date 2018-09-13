@@ -56,5 +56,6 @@ p {
 }
 
 .container {
-    margin-left: 220px;
+    align-items: center;
+    
 }

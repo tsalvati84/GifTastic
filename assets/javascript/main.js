@@ -3,7 +3,7 @@ var topics = ["MLB", "NHL", "NFL", "Skateboarding", "Golf", "NBA"];
 var newTopic = "";
 var a = $("<button>"); 
 
-
+//creates a new button for the new topic that was added to the array
 function topicsButton () {
 
     $(".item").empty();
@@ -20,11 +20,11 @@ function topicsButton () {
 
 topicsButton();
 
-
+//click feature to add new topic to the array
 $("#newTopic").on("click", function() {
     event.preventDefault();
     console.log("submit");
-    newTopic = $("topic-input").val();
+    newTopic = $("#topic-input").val();
 $("#item").append(newTopic);
 topics.push(newTopic);
 console.log(topics);
@@ -34,9 +34,9 @@ topicsButton();
 
 $(document).on("click", "button", function() {
     $("#gifs").empty();
-    var b = $(this).attr("data-name");
+    var a = $(this).attr("data-name");
 console.log("data-name");
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + b + "&api_key=Eo5t7vS8W5Hvtp9WS7xjCTVWyqqrixGo&limit=10";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + a + "&api_key=Eo5t7vS8W5Hvtp9WS7xjCTVWyqqrixGo&limit=10";
     console.log(queryURL);
 
     $.ajax({
